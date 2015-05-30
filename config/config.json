@@ -1,0 +1,18 @@
+{
+  "user": {
+    "email": "jwerner@posteo.de",
+    "telephone": "0178-1698770",
+    "steuernummer": "43/264/02 538",
+    "ustIdNr": "45 698 323 100",
+    "adress": "Jonathan Werner\nStockhausenstr. 11\n22305 Hamburg",
+    "bank": {
+      "name": "Deutsche Kreditbank",
+      "blz": "120 300 00",
+      "owner": "Jonathan Werner",
+      "iban": "DE61120300001011352075"
+    }
+  },
+  "startNr": "43",
+  "notes": "Gem. § 19 (1) UStG enthält der ausgewiesene Betrag keine Umsatzsteuer."
+}
+

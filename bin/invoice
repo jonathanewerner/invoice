@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+mypy-wrap /home/jwerner/dev/invoice/run.py
+
