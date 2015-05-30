@@ -1,5 +1,6 @@
 from pprint import pformat
+import json
 
 class PrettyDict:
-    def __str__(self):
+    def __repr__(self):
         return pformat(self.__dict__)
