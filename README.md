@@ -18,3 +18,5 @@ i also take this project as an opportunity to check out http://mypy-lang.org/ ..
 
 ## example
     invoice new hh taet2[start=13.11.14,end=15.11.14,price=400,place=Hamburg]
+
+looks like [this](https://github.com/jonathanewerner/invoice/blob/master/example/test.pdf)
