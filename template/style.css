@@ -1,0 +1,127 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Mono);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+html {
+  box-sizing: border-box;
+
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+em {
+  font-style: normal;
+  /* text-transform: uppercase; */
+  color: #555;
+}
+
+h1 {
+  font-family: "Roboto Mono", sans-serif;
+  line-height: 100%/1.618;
+}
+
+table {
+  margin: 0;
+  padding: 0;
+  border-spacing: 0;
+}
+
+table.header {
+  table-layout: fixed;
+  width: 100%;
+  margin: 0;
+}
+
+
+/* .header td { */
+/*   width: 50%; */
+/* } */
+
+
+
+table.products {
+  /* width: 90%; */
+  width: 100%;
+  margin: 40px 0 60px 0;
+}
+
+.products tr {
+  line-height: 26px;
+}
+
+tr.white {
+  line-height: 10px;
+  color: white;
+}
+
+tr.white.border {
+  line-height: 2px;
+  /* background: #64FFDA; */
+}
+
+
+.products td:nth-child(2), th:nth-child(2) {
+  text-align: right;
+}
+
+
+th {
+  text-align: left;
+  /* font-family: "Roboto Mono", sans-serif; */
+  /* background: rgba(3, 169, 244, .1); */
+  border-bottom: 1px solid #FFC107;
+}
+
+
+.right-align-second-column td:nth-child(2) {
+  text-align: right;
+}
+
+.gesamt {
+  text-align: right;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.sum {
+  /* font-weight: bold; */
+  /* text-decoration: underline; */
+}
+
+
+tr {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+td {
+  margin: 0;
+  padding: 0;
+}
+
+.bank-info td:nth-child(1) {
+  padding-right: 10px;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 10rem;
+}
+
+p.space {
+  margin-bottom: 5px;
+}
+

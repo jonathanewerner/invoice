@@ -3,4 +3,7 @@ import json
 
 class PrettyDict:
     def __repr__(self):
-        return pformat(self.__dict__)
+        # return
+        return  '[{}] {}'.format(
+                self.__class__.__name__,
+                pformat(self.__dict__))

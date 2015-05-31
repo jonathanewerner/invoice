@@ -12,11 +12,11 @@
       "iban": "DE61120300001011352075"
     }
   },
-  "invoice": {
-    "startNr": "43",
-    "notes": "Gem. § 19 (1) UStG enthält der ausgewiesene Betrag keine Umsatzsteuer."
-  },
-  "exporters": ["textfile"]
+  "startNr": "43",
+  "notes": "Gem. § 19 (1) UStG enthält der ausgewiesene Betrag keine Umsatzsteuer.",
+  "exporters": ["html"],
+  "database_path": "/home/jwerner/dev/invoice/database"
+
 
 }
 

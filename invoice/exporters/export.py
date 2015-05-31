@@ -3,13 +3,13 @@ import sys
 
 # it seems that i cant import the module, set it as value in the mappings
 # dict and then call run on it. so i import the functions themselves
-from invoice.exporters.textfile import run as run_textfile
+from invoice.exporters.html import run as run_html
 
 from invoice.domain.invoice import Invoice
 
 def export(invoice: Invoice, exporter_name: str) -> None:
     mappings = {
-        'textfile': run_textfile
+        'html': run_html
     }
 
     if not exporter_name in mappings:

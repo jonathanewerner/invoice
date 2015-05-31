@@ -1,0 +1,8 @@
+{
+  "taet": {
+    "description": "Tätigkeit als Gitarrist für eine Veranstaltung in $place am $date"
+  },
+  "taet2": {
+    "description": "Tätigkeit als Gitarrist für eine Veranstaltung in $place vom $start–$end"
+  }
+}
