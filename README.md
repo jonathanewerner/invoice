@@ -6,7 +6,7 @@ it's python again and will feature multiple export formats and overall json conf
 i also take this project as an opportunity to check out http://mypy-lang.org/ .. feels pretty great so far.
 
 ## usage
-    invoice new --help                    jwerner@manjaro
+    $ invoice new --help
     usage: invoice new [-h] customer products [products ...]
 
     positional arguments:
