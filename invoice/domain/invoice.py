@@ -9,13 +9,14 @@ class Invoice(PrettyDict):
 
     def __init__(
             self,
+            nr: int,
             customer: Customer,
             user: User,
             products: List[Product],
             notes: str,
             date: str) -> None:
 
-        self.nr = 0
+        self.nr = nr
         self.customer = customer
         self.user = user
         self.products = products

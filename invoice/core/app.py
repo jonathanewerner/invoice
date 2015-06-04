@@ -37,8 +37,9 @@ class InvoiceApp:
         self.user = User(config.user)
 
 
-    def create_invoice(self, products: List[Product], customer_shortname: str):
+    def create_invoice(self, nr: int, products: List[Product], customer_shortname: str):
         invoice = Invoice(
+                nr=nr,
                 customer=self.customers[customer_shortname],
                 products=products,
                 user=self.user,
@@ -82,6 +83,7 @@ def run(args: List[str]) -> str:
     parser = argparse.ArgumentParser(prog='invoice')
     subparsers = parser.add_subparsers(help='available subcommands')
     parser_new = subparsers.add_parser('new', help='new invoice')
+    parser_new.add_argument('nr', type=int, help='invoice nr')
     parser_new.add_argument('customer', type=str, help='customer shortname')
     parser_new.add_argument('products', nargs='+', type=str, help='product shortname/s plus args')
 
@@ -89,6 +91,7 @@ def run(args: List[str]) -> str:
             invoice_app.make_product(*parse_product(product_string))
 
     f = lambda args: invoice_app.create_invoice(
+            nr=args.nr,
             customer_shortname=args.customer,
             products=list(map(make_product, args.products)))
     parser_new.set_defaults(func=f)

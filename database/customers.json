@@ -1,6 +1,10 @@
 {
   "hh": {
-    "name": "Stiftung Kultur Palast",
+    "name": "Stiftung-Kultur-Palast",
     "adress": "Stiftung Kultur Palast Hamburg\nÖjendorfer Weg 30a\n22119 Hamburg"
+  },
+  "ycx": {
+    "name": "YoungClassX",
+    "adress": "The Young ClassX e.V.\nMilchstraße 4\n20148 Hamburg"
   }
 }

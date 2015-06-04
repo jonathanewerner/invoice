@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 # mypy-wrap /home/jwerner/dev/invoice/run.py "$@"
-python3 /home/jwerner/dev/invoice/run.py "$@" | pandoc -o out/test.html -c ../template/style.css
-wkhtmltopdf -L 2cm -R 2.5cm -T 3cm out/test.html out/test.pdf
+python3 /home/jwerner/dev/invoice/run.py "$@"
+# pandoc -o out/test.html -c ../template/style.css
+# wkhtmltopdf -L 2cm -R 2.5cm -T 3cm out/test.html out/test.pdf
 

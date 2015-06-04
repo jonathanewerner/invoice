@@ -4,8 +4,10 @@ from pprint import pprint
 import json
 from textwrap import dedent # type: ignore
 from string import Template
+import os
 
 from invoice.domain.invoice import Invoice
+from invoice.utils.cmd import CmdInvoice
 
 LINE = '-'*20
 
@@ -113,5 +115,19 @@ def run(invoice: Invoice) -> None:
 
             )
     s_ = s.substitute(d) # type: ignore
+    home_dir = os.path.expanduser('~')
 
-    print(s_)
+    invoice_dot_dir_tmp = os.path.join(home_dir, '.invoice', 'tmp')
+    invoice_dot_dir = os.path.join(home_dir, '.invoice')
+    os.makedirs(invoice_dot_dir_tmp, exist_ok=True)
+
+    tmp_outfile = os.path.join(invoice_dot_dir_tmp, 'tmp.txt')
+    open(tmp_outfile, 'w').write(s_)
+
+    cmd = CmdInvoice(invoice_dot_dir)
+    out_file_name = cmd.pandoc(tmp_outfile)
+    invoice_pdf_filename = 'Rechnung-{}-{}.pdf'.format(
+        invoice.nr, invoice.customer.name)
+    cmd.wkhtmltopdf(out_file_name, invoice_pdf_filename)
+
+    cmd.commit(invoice_pdf_filename)

@@ -14,7 +14,7 @@
   },
   "startNr": "43",
   "notes": "Gem. § 19 (1) UStG enthält der ausgewiesene Betrag keine Umsatzsteuer.",
-  "exporters": ["html"],
+  "exporters": ["pdf"],
   "database_path": "/home/jwerner/dev/invoice/database"
 
 
